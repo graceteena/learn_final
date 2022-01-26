@@ -1,0 +1,2560 @@
+----------------------------------------------------------------------
+RDBMS : Day 1,  Date:06-Dec-2021
+----------------------------------------------------------------------
+ Why Digital India ?
+ There is lot of manual work 
+
+----------------------------------------------------------------------
+
+What is Data ?
+Data is a collection of information.
+Meaningful data is called as information.
+----------------------------------------------------------------------
+Data can be stored in different forms
+text, numbers, multimedia, images, Bytes, cloud, flat files, boolean 
+
+How it can be stored ? (Medium)
+1. Papers
+2. Electronic memory
+
+----------------------------------------------------------------------------------------
+What is Database ?
+1.Its a place where data can be stored in a perticular memory location.
+2.Data can be organized and stored and accessible electronically.
+3.It can be stored in one or more tables.
+----------------------------------------------------------------------------------------
+Why is Database ?
+1.Processing the information
+2.Very large number of data can be stored and accessed efficiently
+3. with database the CRUD -> Create, Read, Update and Delete operations can be done easily.
+4. Data is secured in the database.
+----------------------------------------------------------------------------------------
+Applications of Database?
+1. On the Internet 
+Banking sector
+Schools
+Colleges
+Universities
+Social Networking etc. Facebook, twitter, instgram, Whatsapp.
+E-Commerce etc. Amazon, Flipkart
+----------------------------------------------------------------------------------------
+Examples of Databases ?
+Oracle, MySQL, MongoDB, N/W databases, Dbase, Durby, SQL Server, MS Access, FileMaker pro
+---------------------------------------------------------------------------------------- 
+SQL is a language used to manipulate the databases.
+SQL -> Stuctured Query Language.
+---------------------------------------------------------------------------------------- 
+Evolution of Databases ?
+1. File Based -> Store the data in the form of flat files.
+2. Hierachical Data Model
+3. Network Data Model
+   1. Database organization
+   2. database per user
+   3. Language => procedures
+4.RDBMS -> Relational Database Management System
+  
+ What is DBMS ? => Database Management System is a software which is used to manage and maintain the data in system.
+		   Data is in the form of files.
+ Relational DBMS => We used to store the data in the form of tables.
+ Tables -> tables consist of rows and columns
+
+5.Cloud Database ?
+MS Azure, AWS(Amazon Web Services), Sales force, GCP, IBM Cloud, Alibaba Cloud etc. 
+1. High Availability.
+2. High costs
+
+6.NoSQL Database ?
+NoSQL ->  Not only SQL
+store the data in the form of document, key-value pair, graphs, Tabular
+MongoDB -> document based -> JSON: JavaScript Object Notations
+
+product : [{
+   id:1
+   name:"TV"
+   price:30000
+},
+{
+   id:2
+   name:"Washing Machine"
+   price:14000
+},
+] 
+
+1. Highly scalable
+2. Highly available
+
+7. Object-Oriented Databases
+  Data is stored in the form of Objects.
+  Objects? => real-world entity.
+  Book, Table, Chair, Date, Time etc.
+
+8. Graph based databases.
+  kind of NoSQL database. grphical representation of a data.
+ 1. Building complex relationship.
+ Applications : Supply chain management
+---------------------------------------------------------------------------------------- 
+RDBMS => Relational Database Management Systems.
+Examples of RDBMS:
+ORACLE, MYSQL, MS Access, MS SQL Server, IBM, DB2
+
+How we store the data?
+In the form of tables.
+Tables consist of fields and records(tuples)
+
+Why Relational ?
+There are relationships between these tables.
+
+Student table?
+1. roll_number/student Id
+2. name
+3. age
+4. address,
+5. email
+6. phone
+7. gender
+8. Adhar no
+9. pan card no.
+---------------------------------------------------------------------------------------- 
+Employee
+1.emp code/id
+2.name
+3.dob
+4.email
+5.designation
+6.doj
+7.address
+8.gender
+9.account_no
+10.Blood Group
+---------------------------------------------------------------------------------------- 
+Salary_Accounts_details
+1. account_no
+2. account_type
+3. bank and branch name
+4. account holder name
+
+---------------------------------------------------------------------------------------- 
+Student table
+
+ID	Name	AGE	COURSE
+-----------------------------------------
+1	Ajeet	24	B.Tech
+2	aryan	20	C.A
+3	NULL	21	BCA
+4	Ratan	22	MCA
+5	Vimal	26	BSC
+
+---------------------------------------------------------------------------------------- 
+Null values:
+
+3	NULL	21	BCA
+
+Name is missing with NULL values
+---------------------------------------------------------------------------------------- 
+What is data integrity ?
+-To ensure that the data which we store inside the table is accurate and consistent.
+-To maintain the data accuracy and consistency.
+-Reliablility of the data.
+-Validity of the data.
+
+1. Entity Integrity
+   There should not be duplicate rows in the table.
+2. Domain Integrity
+   validating the column w.r.to type, the format, range of values.
+   
+3. Referential Integrity
+   Rows cannot be deleted which are used by other records.
+
+4. User-defined Integrity
+   -> Grant , Revoke, different rules for entity, domain and referntial integrity.
+---------------------------------------------------------------------------------------- 
+Break Time.
+Let come back at 11:15 AM.
+---------------------------------------------------------------------------------------- 
+DBMS Architecture
+1. 1-tier arch.
+2. 2-tier arch.
+3. 3-tier arch.
+
+---------------------------------------------------------------------------------------- 
+1. 1-tier architecture.
+  -> user can access the database directly.
+  -> dedicated to only one user which is using that DBMS.
+  -> local application
+  -> Quick response
+  disadvantage-> it is not applicable for multiple users which are sitting on different machines.
+---------------------------------------------------------------------------------------- 
+2. 2-tier architecture (client - server)
+   - multiple clients can access the database which is there on the server machine.
+   - examples : ODBC:Open Database Connectivity, JDBC : Java Database Connectivity. 
+   - Client : The DB connectivity code and query firing code.
+	1. DB Driver
+	2. DB URL
+	3. Username
+	4. Password
+   - Server : query processing, transaction management-> commit and rollback and savepoint.
+---------------------------------------------------------------------------------------- 
+3. 3-tier architecture
+- In 3 tier arch. we have 3 layers involved
+  1. Client -> To call the APIs which are provided by the application server.
+  2. Application Server -> It will perform all the actual business logic w.r.t database.transaction management-> commit and rollback 			   and savepoint.
+  3. Database Server -> query processing, and storing the data.
+---------------------------------------------------------------------------------------- 
+4. n-tier arch. 
+  Client - Firewall - Application Server - Network layers - Database Server
+---------------------------------------------------------------------------------------- 
+Three Schema Architecure 
+- Three level architecture.
+- how database system works internally.
+1. External Level -> acts as a View Schema
+2. Conceptual Level -> Logical Schema
+3. Internal Level -> Physical Schema.
+---------------------------------------------------------------------------------------- 
+Data Models
+What is Data Models ?
+1. Models the data discriptions
+2. data semantics -> relations between the models.
+3. data consistency and constraints of the data.
+4. Design of the databases at each level.
+---------------------------------------------------------------------------------------- 
+Types of Data models
+1.Relational Data model
+2.Semistrucured Data model
+3.Entity Relationship data model.
+4.Object-based data model.
+---------------------------------------------------------------------------------------- 
+1.Relational Data model
+Data is in the form of rows and columns -> tables.
+- It is mostly used in commercial applications.
+
+2.Semistrucured Data model
+ XML -> Extensible Markup Language.
+ user defined tags
+
+3. Entity Relationship Model
+   We establish relationships between the entities.
+   Customer -> Order
+  - Degree of Cardinality 
+	1 Customer -> 1 Order (one-to-one)	
+	1 Customer -> n Orders (one to many)
+	n Customers -> n Orders (many to many)
+
+4. Object-based data model.
+  - Its an extention to ER model but also consist of OOPC e.g encapsulation, polymorphism  
+
+---------------------------------------------------------------------------------------- 
+Entity -> Student wants to appear for an E-Learning 
+1.Student
+(student_id, name, email, dob)
+2.Course
+(course_id,course_name,year_enrolled, duration,student_id, plan, feedback, subscription, cost)
+3.Section
+(no_of_modules,course_id,course_name,no_of_modules_completed, difficulty_level, assesment_score,
+ groups, FAQs)
+---------------------------------------------------------------------------------------- 
+Entity Relationship Model
+ER modeling can be portrayed with ER Diagram.
+---------------------------------------------------------------------------------------- 
+Components of ER Diagram
+1.Entity
+    - Weak Entity   	
+2.Attribute
+	- Key Attribute
+	- Composite Attribute
+	- Multivalued attribute
+	- Derived Attribute
+3.Relation
+	- One to One
+	- One to Many
+	- Many to One
+	- Many to Many
+
+---------------------------------------------------------------------------------------- 
+1.Entity: An entity -> Object, person, class, place. 
+  It can represented as Rectangles 
+
+Weak Entity : 
+-its an Entity which depends on another entity.
+-the weak entity does not contain any key attribute of its own.
+- Weak entity is represented as double rectangle.
+---------------------------------------------------------------------------------------- 
+2. Attribute
+
+its is used to describe the property of an Entity.
+Student
+1.Key Attribute- Key Attribute is used to represent the main characterstics of an entity.
+- This is represented by primary key constraint.
+- To represent the key attribute we use ellipse with the text underlined.
+---------------------------------------------------------------------------------------- 
+Lets take a break till 2:15
+---------------------------------------------------------------------------------------- 
+Link to refer the day wise artifacts on RDBMS and Oracle SQL
+https://mphasis-my.sharepoint.com/:f:/p/anup_kini/EqkqxAndwh5EhjtCHnVfdQ4BOLRNIeAn5zKbhdAicMuDlA?e=sd2A39
+---------------------------------------------------------------------------------------- 
+Composite Attribute
+- Name : First Name - Middle Name - Last Name 
+- The attribute composed of many other attribute is knows as composite attribute
+- Address : street, city
+- Account_Details: account_no, ifsc_code, branch, account type.
+---------------------------------------------------------------------------------------- 
+Multivalued attribute
+1. phone_no : more than one values for the attribute
+2. address
+3. email  
+4. account 
+5. branches
+To Represent multivalued attribute we use double oval.
+----------------------------------------------------------------------------------------  
+Derived Attribute
+- Its such an attribute which derived from another attribute.
+1.age -> date of birth.
+2.yearOfService -> DOJ.  
+To Represent Derived attribute we use dashed ellipse.
+
+----------------------------------------------------------------------------------------  
+3. Relationship -> relation between the entities
+ Diamond or Rhombus to represent relationship
+----------------------------------------------------------------------------------------  
+ a. One to One 
+ b. One to Many
+ c. Many to One
+ d. Many to Many
+----------------------------------------------------------------------------------------  
+a. One To One
+For Example :
+Female ->  Married To -> Male
+1			 1 
+Person -> Has a -> Passport
+Principal -> Manages -> School
+	
+----------------------------------------------------------------------------------------  
+b. One to Many
+ Teacher -> Manages -> Students
+ India -> has -> States
+ Employee -> belongs to -> Departments
+ Supplier -> Provides -> Quotation
+ College -> has -> Branch
+ Customer -> places -> Order
+ Mobile -> manages -> Applications
+----------------------------------------------------------------------------------------  
+c. Many to one
+ Department -> has -> Employee
+ Student -> enroll -> Course.
+ College -> affiliated -> university
+ Inventions -> invented -> Scientist
+ Test -> for -> Application
+----------------------------------------------------------------------------------------  
+d. Many to Many 
+ Author -> can write -> Book
+ Employees -> is assigned -> Project
+ Customer -> places -> Order
+
+----------------------------------------------------------------------------------------  
+DBMS Keys 
+- It is used to uniquely identify the record or row from the table.
+Student
+ID -> Key Attribute.
+Name
+Address
+Course
+-----------------------------------------------------------
+Person
+Name
+DOB
+Passport_number
+Adhaar_number.
+License_number
+PAN_card_No
+-----------------------------------------------------------
+DBMS Keys : 4 types
+1. Primary Key.
+2. Candidate Key.
+3. Super Key.
+4. Foreign Key.
+-----------------------------------------------------------
+1. Primary Key -> Unique, Not Null
+ Employee
+ emp_id -> primary key
+ name
+ address
+ passport_no
+ license_no
+-----------------------------------------------------------
+2.Candidate Key ->
+- A candidate key is an attribute or set of attributes can uniquely identify the record.
+- The remaining attributes including primary key are considered as a candidate key.
+
+ Employee
+ emp_id -> primary key
+ name
+ address
+ [
+ 	Phone_no
+	 passport_no
+	 license_no
+	 Adhaar_no
+
+ ] = Candidate key.
+Candidate Key can also includes primary as well.
+-----------------------------------------------------------
+3. Super Key: is super set of candidate key.(Composite Key)
+ Employee
+ [emp_id -> primary key,
+ name] = Super Key.
+ address
+ Phone_no
+ passport_no
+ license_no
+ Adhaar_no 
+-----------------------------------------------------------
+4. Foreign Key 
+  Employee  ->  Department
+  -id(PK)	department_no(PK)
+  -name		department_name
+  -passport_no  location
+  -license_no
+  -department_no(foreign key)
+-----------------------------------------------------------  
+
+1.	Key
+2.	Composite
+3.	Multi Valued
+4.	Derived 
+
+-----------------------------------------------------------  
+Day - 2 :: Date:07-Dec-2021
+-----------------------------------------------------------  
+DBMS Generalization:
+
+Generalization is like a bottom-up approach.
+2 or more entites of lower level we combine it to form a higher level entity.
+
+	  Person	
+
+	  IS - A
+
+  Faculty        Student
+
+-----------------------------------------------------------  
+DBMS Specialization: Top Down
+    
+	      Technology
+	
+		IS-A
+	    	
+	Java     Python    DBMS  Testing
+
+1 higher level entity can be broken down into multiple lower level entities.
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------
+How to Convert your ER diagram into DB tables
+--------------------------------------------------------------------------------------------
+Normalization
+
+What is Normalization ?
+
+Normalization is the process of removing or reducing the redunduncy between the database tables.
+Simplify the relationship between the tables.
+
+--------------------------------------------------------------------------------------------
+What is Functional Dependency ?
+
+The functional dependency is a relationship between two attributes/fields of a table.
+primary key and non-key attribute.
+
+X -> Y
+
+X = Determinant
+Y = Dependent.
+
+Employee table : emp_id, emp_name, emp_address
+
+emp_id -> primary key 
+
+=> emp_id -> emp_name
+emp_name is functionaly dependent on emp_id.
+--------------------------------------------------------------------------------------------
+Functional Dependency 
+2 Types 
+
+1. Trivial FD
+2. Non-Trivial FD.
+
+1. Trivial FD
+
+A -> B has trivial dependency , if B is subset of A.
+
+A -> A, B -> B 
+
+{emp_id, emp_name} -> emp_id  => trivial dependency.
+
+emp_name -> emp_name => trivial 
+emp_id -> emp_id => trivial
+--------------------------------------------------------------------------------------------
+2. Non-Trivial FD.
+1.A -> B has non trivial dependency , if B is not a subset of A.
+2. When A intersection B is NULL.
+
+emp_id -> emp_name
+emp_name -> emp_address
+emp_name -> emp_dob
+
+--------------------------------------------------------------------------------------------
+Inference Rules
+
+These are Types of Assertions. 
+It can be applied to set of FD to derive other FD.
+
+1.Reflexive Rule
+2.Augmentation Rule
+3.Transitive Rule
+4.Union Rule
+5.Decomposition Rule.
+--------------------------------------------------------------------------------------------
+1.Reflexive Rule
+In Reflexive Rule if Y is subset of X then X determines Y.
+X -> Y
+
+X = {a,b,c,d,e}
+Y = {a,b,c}
+--------------------------------------------------------------------------------------------
+2.Augmentation Rule (Partial Dependency)
+If X determines Y, them XZ determines YZ for any Z
+
+X -> Y then XZ -> YZ.
+
+For R(ABCD) -> if A -> B then AC -> BC
+--------------------------------------------------------------------------------------------
+3.Transitive Rule
+
+if X determines Y and Y determines Z then X determines Z.
+
+if X -> Y and Y -> Z then X -> Z.
+
+--------------------------------------------------------------------------------------------
+4.Union Rule
+X -> Y and X -> Z then X -> YZ
+--------------------------------------------------------------------------------------------
+5.Decomposition Rule.
+X -> YZ then 
+X -> Y and X -> Z
+--------------------------------------------------------------------------------------------
+
+Normalization
+
+What is Normalization ?
+
+Normalization is the process of removing or reducing the redunduncy between the database tables.
+Simplify the relationship between the tables.
+
+Problems that we face with un-normalized table:
+1. updation anomaly
+2. insertion anomaly
+3. deletion anomaly
+
+original : employee
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Delhi		D002
+123	Maggie		Agra		D890
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+----------------------------------------------------
+
+1. Updation Anomaly
+   update employee set emp_address = 'Mumbai' where emp_dept = 'D002';
+   
+   select * from employee;
+
+Updated Table employee
+
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Mumbai		D002
+123	Maggie		Agra		D890
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+2. insertion anomaly
+original : employee
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Delhi		D002
+123	Maggie		Agra		D890
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+insert into employee values(167,'John','Bangalore',NULL);
+select * from employee;
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept -> Not Null
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Delhi		D002
+123	Maggie		Agra		D890
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+167	John		Bangalore	NULL
+169	Virat		Delhi		NULL
+----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+3. Deletion Anomaly
+
+original : employee
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Delhi		D002
+123	Maggie		Agra		D890
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+----------------------------------------------------
+delete from employee where emp_dept = 'D890';
+select * from employee
+
+----------------------------------------------------
+emp_id	emp_name	emp_address	emp_dept
+----------------------------------------------------
+101	Rick		Delhi		D001
+101	Rick		Delhi		D002
+166	Glenn		Chennai		D900
+166	Glenn		Chennai		D004
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Normalization Process is step wise process, Which consist of multiple normal forms
+
+Table
+
+1. 1NF (First Normal Form)
+2. 2NF (2nd Normal form)
+3. 3NF (3rd Normal form)
+4. BCNF (Boyce and Codd normal form).
+5. 4NF
+6. 5NF and so on...
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+1. First Normal Form
+ Rule of First Normal form, 
+ 1. It contains an automic value.
+ 2. An attribute cannot hold multiple values. It must be single-valued attribute.
+
+----------------------------------------------------------- 
+ EMP_ID		EMP_NAME	EMP_PHONE	EMP_STATE		
+----------------------------------------------------------
+ 14		John		7272826385,	UP
+				9064738238
+----------------------------------------------------------
+ 20		Harry		8574783832	Bihar
+---------------------------------------------------------- 
+ 12		Sam		7390372389,	Punjab
+				8589830302
+----------------------------------------------------------
+
+======================================================================================================================================================
+1.approach
+1NF
+------------------------------------------------------------------------------------
+ EMP_ID		EMP_NAME	EMP_PHONE1	EMP_PHONE2	EMP_STATE		
+------------------------------------------------------------------------------------
+ 14		John		7272826385      9064738238	UP	
+------------------------------------------------------------------------------------
+ 20		Harry		8574783832	NULL		Bihar
+------------------------------------------------------------------------------------
+ 45		Virat		8574783842	NULL		Delhi
+------------------------------------------------------------------------------------
+ 12		Sam		7390372389	8589830302	Punjab
+------------------------------------------------------------------------------------
+
+2. approach
+1NF
+
+----------------------------------------------------------- 
+ EMP_ID		EMP_NAME	EMP_PHONE	EMP_STATE		
+----------------------------------------------------------
+ 14		John		7272826385	UP
+----------------------------------------------------------
+ 14		John		9064738238	UP
+----------------------------------------------------------
+ 20		Harry		8574783832	Bihar
+---------------------------------------------------------- 
+ 12		Sam		7390372389	Punjab
+----------------------------------------------------------
+ 12		Sam		8589830302	Punjab
+----------------------------------------------------------
+=====================================================================================================================================================
+
+2. 2NF (2nd Normal form)
+1. In the 2NF, relation must be in 1NF
+2. all non-key attributes must be fully functional dependent on the primary key / candidate key.
+   OR
+   There should not be any partial dependency between the non-key and primary key / candidate key column
+
+Teacher Table
+-----------------------------------------------------
+TEACHER_ID(Key)	SUBJECT(key)  TEACHER_AGE
+-----------------------------------------------------
+25		Chemistry	30
+-----------------------------------------------------
+25		Biology		30
+-----------------------------------------------------
+47		English		35
+-----------------------------------------------------
+83		Math		38
+-----------------------------------------------------
+83		Computer	38
+-----------------------------------------------------
+-----------------------------------------------------
+Candidate Key = (TEACHER_ID, SUBJECT) 
+
+=> TEACHER_ID -> TEACHER_AGE
+
+
+Teacher_Details
+----------------------------
+TEACHER_ID(Key)	TEACHER_AGE
+--------------------------
+25		30
+--------------------------
+47		35
+-------------------------
+83		38
+-------------------------
+
+Teacher_Subject
+------------------------
+TEACHER_ID(Key)	SUBJECT(Key)	
+--------------------------
+25		Chemistry
+-------------------------
+25		Biology	
+------------------------
+47		English	
+------------------------
+83		Math	
+------------------------
+83		Computer
+------------------------
+
+=====================================================================================================================================================
+
+3. Third Normal Form (3NF)
+
+1. A relation will be in 3NF if it is in 2NF -> its non key attribute should be fully functional dependent on Primary key / Candidate Key.
+2.There should not be any transitive dependency for non-key attributes. 
+
+
+ A relation is in 3rd Normal form if it holds atleast one of following conditions
+ For every non-trivial function dependency X -> Y.
+ 
+ 1. X is a Super Key
+ 2. Y is a prime attribute i.e each element of Y is part of some candidate key.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+EMP_ID	EMP_NAME	EMP_ZIP		EMP_STATE	EMP_CITY
+---------------------------------------------------------------------------
+222	Harry		201010		UP		Noida
+333	Stephan		02228		US		Boston
+444	Lan		60007		US		Chicago
+555	Katharine	06389		UK		Norwich
+666	John		462007		MP		Bhopal
+---------------------------------------------------------------------------
+Primary Key and Candidate Key = EMP_ID
+
+Super Key : (EMP_ID, {EMP_ID,EMP_NAME}, {EMP_ID,EMP_NAME,EMP,ZIP}....)
+
+Candidate Key : EMP_ID
+Non-prime attributes: all the attributes except emp_id are non-prime.
+
+Here we EMP_STATE and EMP_CITY are dependent on EMP_ZIP and 
+EMP_ZIP code is dependent on EMP_ID.
+
+These are in 3NF Form.
+
+Employee table
+----------------------------------------
+EMP_ID(PK)EMP_NAME	EMP_ZIP(FK)		
+----------------------------------------
+222	Harry		201010		
+333	Stephan		02228		
+444	Lan		60007		
+555	Katharine	06389		
+666	John		462007		
+----------------------------------------
+
+
+Employee_ZIP
+-----------------------------------------
+EMP_ZIP(Key) EMP_STATE	      EMP_CITY
+-----------------------------------------
+201010		UP		Noida
+02228		US		Boston
+60007		US		Chicago
+06389		UK		Norwich
+462007		MP		Bhopal
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1. BCNF -> Boyce Codd Normal Form
+
+1. BCNF is the extension to 3NF. its stricter 3NF
+2. A table is in BCNF if, every functional dependency X -> Y, X is super key of the table.
+3. BCNF the table should be in 3NF and for every Function Dependency LHS is super key
+
+---------------------------------------------------------------------
+EMP_ID	EMP_COUNTRY	EMP_DEPT	DEPT_TYPE	EMP_DEPT_NO
+---------------------------------------------------------------------
+264	India		Designing	D394		283
+264	India		Testing		D394		300
+364	UK		Stores		D283		232
+364	UK		Developing	D283		549
+---------------------------------------------------------------------
+EMP_ID -> EMP_COUNTRY
+
+EMP_DEPT -> {DEPT_TYPE, EMP_DEPT_NO}
+
+EMP_ID and EMP_DEPT.
+
+Candidate Key:  {EMP_ID, EMP_DEPT}
+
+EMP_COUNTRY table
+--------------------
+EMP_ID	EMP_COUNTRY
+------------------
+264	India	
+264	India
+364	UK
+364	UK
+------------------
+
+EMP_DEPT table
+---------------------------------------------------------------------
+EMP_DEPT	DEPT_TYPE	EMP_DEPT_NO
+---------------------------------------------------------------------
+Designing	D394		283
+Testing		D394		300
+Stores		D283		232
+Developing	D283		549
+---------------------------------------------------------------------
+
+EMP_DEPT_MAPPING
+----------------------
+EMP_ID	EMP_DEPT_NO	
+----------------------
+264	283	
+264	300	
+364	232		
+364	549
+---------------------
+      	
+Candidate Keys
+EMP_COUNTRY table : EMP_ID
+EMP_DEPT table : EMP_DEPT
+EMP_DEPT_MAPPING table : {EMP_ID, EMP_DEPT_NO}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+https://livesql.oracle.com/apex/f?p=590:1000
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is Oracle?
+Oracle is RDBMS from Oracle Corporation.
+
+
+What is the Oracle Database?
+-Oracle is RDBMS from Oracle Corporation. It is also called as OracleDB or simply Oracle.
+-Year 1977 -> Lawrence Ellison.
+-Oracle is market leader in RDBMS's 
+-Oracle is famous for entrpise grid computing and data warehousing.
+-entrpise grid computing provides most flexible way to manage information and applications.
+-SQL is the language used to interact with the database.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Editions of Oracle Database
+Current version - 19c.
+from 11g onwards all the features are coming in the latest versions are backward compatible. 
+
+1. Enterprise Edition - it is used in big enterprises. It offers all the features, offers security.
+2. Standard Edition - provides the base functionality.
+3. Express Edition(XE) -> It is very lightweight and free and limited to Windows and Linux OS.   
+4. Oracle Lite : is designed for mobile devices.
+5. Personal Edition: It is comparable with EE but without the Oracle Real Application Clusters. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------   18C 
+Oracle 4 -> 1984
+.
+.
+.
+9i  -> 2001
+10g -> 2003
+11g -> 2006
+12C -> 2014
+18C -> 2018
+Current version - 19c. -> 2020
+
+-----------------------------------------------------------------------------------------------------------------------------------------------   
+Oracle Database Features
+1. Availibility -> Highly Available => Oracle Data Guard Functionality.
+2. Security -> High Security.
+3. Scalablility -> Real Application Cluster 
+4. Performance
+5. Analytics
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Day 3 :-> Oracle SQL DATE : 08-12-2021.
+-----------------------------------------------------------------------------------------------------------------------------------------------   
+Oracle Database Management System
+- SQL : Structured Query Language. 
+- SQL : its a case insensitive.
+- SQL : whenever we are using SQL server doing some DML operations and power goes off then the data will be restored. 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Types of Commands
+1.DDL -> Data Definition Language
+2.DML -> Data Manipulation Language
+3.DCL -> Data Control Language
+4.DQL -> Data Query Language
+5.TCL -> Transaction Control Language
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1.DDL -> Data Definition Language
+create,desc,alter, drop, rename, truncate etc.
+
+1. create : to create a table in the database.
+
+create table [table_name] (
+   column1 datatype [NULL|NOT NULL],
+   column2 datatype [NULL|NOT NULL],
+   column3 datatype [NULL|NOT NULL],
+	...
+
+   column_n datatype [NULL|NOT NULL],
+);
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+ create table customers(
+    customer_id number(10) NOT NULL,
+    customer_name varchar2(50) NOT NULL,
+    city varchar2(50)
+ );
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+2. How to view the structure of the table.
+command : describe customers or desc customers
+desc customers;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+3.drop: this command is used to delete the table from the database. 
+ command : drop table [table_name];
+
+ drop table customers;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+How to add primary key constraint to a column?
+ 
+CREATE TABLE customers(
+    customer_id number(10) NOT NULL,
+    customer_name varchar2(50) NOT NULL,
+    city varchar2(50),
+    CONSTRAINT customers_pk PRIMARY KEY (customer_id)  
+ );
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+4. CREATE TABLE AS command: is used to create a table from an existing table by copying the columns of existing table.
+
+Syntax : 
+	CREATE TABLE new_table_name 
+	AS (SELECT * FROM existing_table);
+ 
+------------------------------------------------------
+create table newcustomers
+as (select * from customers);
+
+------------------------------------------------------
+create table newcustomers
+as (select CUSTOMER_NAME, CITY from customers);   
+--------------------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE command:
+ALTER TABLE command is used to add, modify, drop or delete and rename columns in a table. it is also used to rename the table.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE [table_name]
+ADD column_name column-definition;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE customers
+ADD customer_age number(10);
+
+desc customers;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to add multiple columns 
+
+ALTER TABLE [table_name]
+ADD (
+	column_1 column_definition,
+	column_2 column_definition,
+	column_3 column_definition,
+	...
+);
+--------------------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE customers
+ADD (
+    customer_type varchar2(50),
+    customer_address varchar2(50)
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+How to modify the column of a table ?
+
+ALTER TABLE [table_name]
+MODIFY column_name column_type constraint;
+
+ALTER TABLE customers
+MODIFY customer_name varchar2(100);
+
+
+ALTER TABLE [table_name]
+MODIFY ( column_name1 column_type constraint,
+	 column_name2 column_type constraint,
+	 column_name3 column_type constraint, and so on...);
+
+How to add the constraint to the coumn?
+
+alter table students
+add constraint unique_address UNIQUE (student_name, student_address);
+
+desc students;
+
+How to drop the constraint ?
+
+alter table students
+drop constraint SYS_C0073440261;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+How to drop column of a table ? : deleting a column from a table.
+
+ALTER TABLE [table_name]
+DROP COLUMN column_name;
+
+ALTER TABLE customers
+DROP COLUMN customer_type;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+How to rename column of a table ?
+
+ALTER TABLE [table_name]
+RENAME COLUMN column_name to new_column_name;
+
+
+ALTER TABLE customers
+RENAME COLUMN customer_name to cname;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+How to rename the table name ?
+
+ALTER TABLE table_name
+RENAME TO new_table_name;
+
+ALTER TABLE customers
+RENAME TO retailers;
+--------------------------------------------------------------------------------------------------------------------------------------
+DROP TABLE statement:
+It is used to delete a table from a database.
+
+Syntax:
+
+DROP [SCHEMA_NAME].TABLE table_name
+     [CASCADE CONSTRAINTS]
+     [PURGE];
+
+SCHEMA_NAME : the schema that owns the table.
+
+TABLE_NAME : the name of the table which you want to remove.
+
+CASCADE CONSTRAINTS: It is optional. If specified, it will drop all refertial integrity constraints as well.
+
+PURGE: Its is also optional. if specified, the table and its dependent objects are placed in recycle bin and can't be recovered.
+
+drop table newcustomers;
+
+Employee -> Dept
+eid(pk)	    dno(pk)
+don(fk)
+
+drop table employee 
+CASCADE CONSTRAINTS;
+(Both employee and dept table will be deleted)
+--------------------------------------------------------------------------------------------------------------------------------------
+What is Global Temporary Table?
+Temporary Table which is create which have all the features like join, triggers, cardinality etc. but these tables can't have
+foreign keys related to other tables.
+
+syntax:
+create global temporary table [table_name](
+	column1 datatype [NOT NULL | NULL],
+	column2 datatype [NOT NULL | NULL]
+	column3 datatype [NOT NULL | NULL]
+	column4 datatype [NOT NULL | NULL]
+	...
+	...
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Truncate Command : It will delete all the data from the table and remain with table structure.
+
+desc customers;
+insert into customers values(
+    2,
+    'Mark',
+    'Pune' ,
+    26,
+    'Pune'
+);
+
+select * from customers;
+
+truncate table customers;
+
+desc customers;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+DML commands - insert, update and delete.
+
+1. insert into command.
+
+insert into table_name 
+(column_name1, column_name2 ....) 
+values(exp1,exp2,exp3,..., ...);
+
+insert into customers(customer_id, customer_name, city) values (1,'John','Pune');
+
+--------------------------------------------------------------------------------------------------------------------------------------
+2. insert All statement
+
+  insert all 
+  into table_name (column_name1, column_name2 ....) values(exp1,exp2,exp3,..., ...)
+  into table_name (column_name1, column_name2 ....) values(exp1,exp2,exp3,..., ...)
+  insert into table_name (column_name1, column_name2 ....) values(exp1,exp2,exp3,..., ...);
+select * from dual;
+
+     
+insert all
+    into customers(customer_id, customer_name, city) values (2,'Mark','Mumbai')
+    into customers(customer_id, customer_name, city) values (3,'Linda','Chennai')
+    into customers(customer_id, customer_name, city) values (4,'Martin','Bangalore')
+select * from dual;
+--------------------------------------------------------------------------------------------------------------------------------------
+3.update command ->
+
+syntax: 
+
+UPDATE table_name SET column1 = exp1, column2 = exp2 ... WHERE conditions;  
+
+
+UPDATE customers SET city = 'Delhi' where customer_id = 3;
+
+UPDATE customers SET customer_name='Anup', city = 'Bangalore' 
+where customer_id = 3;
+--------------------------------------------------------------------------------------------------------------------------------------
+4.delete command -> 
+
+syntax: 
+
+DELETE FROM table_name where conditions
+
+delete from customers Where city = 'Mumbai';
+select * from customers;
+--------------------------------------------------------------------------------------------------------------------------------------
+Oracle Clauses
+
+1.DINSTICT -> To remove the duplicate or repeated values 
+--------------------------------------------------------------------------------------------------------------------------------------
+ select distinct job from emp;
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2.ORDER_BY -> sorting purpose -> desc or asc
+select ename, job, sal from emp order by sal asc;
+select ename, job, sal from emp order by sal desc;
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3.GROUP_BY -> colletion of data from multiple records and group the results by one or more columns.
+If I want to find the MAX_SALARY department wise ?
+select max(sal) from emp group by deptno;
+If I want to find the MIN_SALARY department wise ?
+select min(sal) from emp group by deptno;
+If I want to find the AVG_SALARY department wise ?
+select avg(sal) from emp group by deptno;
+--------------------------------------------------------------------------------------------------------------------------------------
+This is use of aggrigate function 
+select count(*) as "NO_EMPLOYEES", sum(sal) as "TOTAL_SUM_SAL", avg(sal) from emp;
+--------------------------------------------------------------------------------------------------------------------------------------
+4.HAVING -> Having clause is used with group by clause to restrict the groups of returned rows where condtition TRUE
+--------------------------------------------------------------------------------------------------------------------------------------
+display the job and minimum salary of the employee who belongs to job as MANAGER.
+select job, min(sal) from emp group by job;
+
+display the job and minimum salary of the employee who's salary is less than 3000.
+select job, min(sal) from emp group by job having min(sal) < 3000;
+--------------------------------------------------------------------------------------------------------------------------------------
+5.WHERE -> is to provide conditions
+6.FROM -> we use this with table name 
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+Stored Functions in Oracle SQL
+--------------------------------------------------------------------------------------------------------------------------------------
+1. round
+2. upper
+3. lower
+4. substr
+5. initcap
+6. reverse
+7. instr
+8. mod
+9. length
+10. replace
+11. to_char
+12. last_day
+13. trim
+14. lapd and rpad
+15. nvl, nvl2
+--------------------------------------------------------------------------------------------------------------------------------------
+I want to find the salary which is rounded off to the nearest thousand ?
+select round(sal / 1000) * 1000 from emp;
+--------------------------------------------------------------------------------------------------------------------------------------
+Display the names of all employees with the initial letter only in capital.
+select initcap(ename) from emp;
+--------------------------------------------------------------------------------------------------------------------------------------
+Display all names of all employees replacing 'A' with 'a';
+select replace(ename,'A','a') from emp;
+--------------------------------------------------------------------------------------------------------------------------------------
+Reminder value of 12 divided by 5;
+select mod(12,5) from dual;
+--------------------------------------------------------------------------------------------------------------------------------------
+I want to display the date in the format => 'ddth mon, yyyy'    8th Dec, 2021.
+select to_char(sysdate, 'ddth mon, yyyy') as "TODAYS_DATE" from dual;
+--------------------------------------------------------------------------------------------------------------------------------------
+If I want to display the last day of the month for every hiredate of employee.
+select last_day(hiredate) as "LAST_DAY_OF_MONTH" from emp;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------
+Oracle SQL : Day 4,  Date:09-Dec-2021
+----------------------------------------------------------------------
+Some Oracle Operators
+Union
+Union All
+Intersect
+Minus
+----------------------------------------------------------------------
+Joins
+Cartesian Join (Cross Join)
+Natural Join
+Equi Join
+Outer Join
+	Left Outer
+	Right Outer
+	Full Outer
+
+----------------------------------------------------------------------
+1. Union Operator
+Union operator we use to combine the result sets of two or more select statements.
+It combines both select statement and removes duplicate rows between them.
+
+Each select statement within UNION must have the same number of fields and the result sets with similar data types.
+Syntax:
+
+select column1, column2.... from 
+table1 
+where conditions
+UNION
+select column1, column2.... from 
+table2
+where conditions;
+
+Example Demo:
+
+select deptno from emp
+UNION
+select deptno from dept;
+
+
+Example Demo 2:
+
+select empno,ename from emp
+UNION
+select deptno,dname from dept;
+----------------------------------------------------------------------
+2. Union All
+Union All operator is used to combine sets of 2 or more select statemetns.
+It does not remove the duplicate rows between the various select statements.
+
+Each select statement within UNION ALL must have the same number of fields and the result sets with similar data types.
+
+Example Demo:
+
+select deptno from emp
+UNION ALL
+select deptno from dept;
+----------------------------------------------------------------------
+3. Intersect operator
+Intersect Operator is used to return the results of 2 or more select statement. It picks the common records from select queries.
+
+Example Demo:
+select deptno from emp
+INTERSECT
+select deptno from dept;
+----------------------------------------------------------------------
+4.Minus:
+MINUS operator is used to return all rows in the first select statement that are not returned by second select statement.
+
+
+select deptno from emp
+MINUS
+select deptno from dept;
+
+select deptno from dept
+MINUS
+select deptno from emp;
+----------------------------------------------------------------------
+BETWEEN operator 
+Is used to get the values from given range in select, insert, delete or update statement.
+
+Syntax: 
+Expression between value1 AND value2;
+
+select ename,sal from emp where sal between 800 and 3000;
+select * from emp where deptno IN (10,20);
+
+----------------------------------------------------------------------
+Comparison Operators
+
+= 	Equal
+<>	Not Equal
+!= 	Not Equal
+>  	Greater than
+<	Less Than
+>=, <=  GE and LE
+----------------------------------------------------------------------
+IS NULL and IS NOT NULL
+
+It is used to check the NULL values, use with select, insert, update and delete statements.
+
+select * from emp where comm IS NOT NULL;
+select ename, job from emp where comm is null;
+
+----------------------------------------------------------------------
+LIKE operator:
+we use in select, insert, update and delete in where clause using wildcard. 
+USE : Pattern Matching.
+
+expression LIKE [ESCAPE 'escape character']
+
+%  => used for matching string
+
+_ (underscore)  => is used for single character matching.
+
+select ename from emp where ename like '%S';
+----------------------------------------------------------------------
+|| operator used to concatinate the strings.
+
+select ename|| ' HAS HELD THE POSITION OF ' || job || ' IN DEPT ' || deptno || ' SINCE ' || hiredate as "STATEMENT" from emp;
+----------------------------------------------------------------------
+Subqueries
+Subquery is nothing but query inside a query. can be made using where, from or select cluase.
+
+Find the employees which are working in a specific department. 
+
+select ename, deptno from emp where deptno = (select deptno from dept where dname='SALES');
+select dname,deptno from dept;
+
+----------------------------------------------------------------------
+Joins -> combination of 2 tables
+Why we require ?
+table1 and table2
+Prerequisites : There must be some relation between the two tables.
+Find which is the common attribute between the two tables.
+
+Example : emp and dept =>  deptno.
+
+Subqueries are used to join the tables and getting some results.
+join => (cartesian product of two tables + some condition)
+
+------------------------------------------------------
+Table 1 : emp
+------------------------------------------------------
+eid	ename	sal 	deptno	 m =>  rows
+1	A	5000	10
+2	B	3000	20
+3	C	6000	20
+
+------------------------------------------------------
+Table 2 : dept
+------------------------------------------------------
+deptno	dname	location   n => rows
+10	SALES	PUNE
+20	HR	BANGALORE
+------------------------------------------------------
+m * n = cartisian product
+3 * 2 = 6
+
+------------------------------------------------------
+Table 1 : emp
+------------------------------------------------------
+eid	ename	sal 	deptno	deptno 	dname   location 
+------------------------------------------------------
+1	A	5000	10	 10	SALES   PUNE
+1	A	5000	10	 20	HR   	BANGALORE
+2	B	3000	20	 10	SALES   PUNE
+2	B	3000	20	 20	HR   	BANGALORE
+3	C	6000	20	 10	SALES   PUNE
+3	C	6000	20	 20	HR   	BANGALORE
+------------------------------------------------------
+
+----------------------------------------------------------------------
+Tables used for joins examples
+----------------------------------------------------------------------
+create table employee(
+    empno number(10),
+    ename varchar2(20),
+    address varchar2(30),
+    CONSTRAINT empno_pk PRIMARY KEY (empno)
+);
+
+create table department(
+    deptno varchar2(10),
+    dname varchar2(30),
+    empno number(10),
+    CONSTRAINT deptno_pk PRIMARY KEY (deptno),
+    CONSTRAINT empno_fk FOREIGN KEY (empno) references employee(empno) 
+)
+
+----------------------------------------------------------------------
+Equi Join
+create table department(
+    deptno varchar2(10),
+    loc varchar2(30),
+    empno number(10),
+    CONSTRAINT deptno_pk PRIMARY KEY (deptno),
+    CONSTRAINT empno_fk FOREIGN KEY (empno) references employee(empno) 
+)
+----------------------------------------------------------------------
+create table study(
+    sid varchar2(10),
+    cid varchar2(10),
+    since number(10)
+);
+
+----------------------------------------------------------------------
+Table Data 
+Natural Join Data
+insert into employee values(1,'RAM','Delhi');
+insert into employee values(2,'Varun','Chd');
+insert into employee values(3,'Ravi','Chd');
+insert into employee values(4,'Amrit','Delhi');
+
+
+insert into department values('D1','HR',1);
+insert into department values('D2','IT',2);
+insert into department values('D3','MRKT',4);
+
+----------------------------------------------------------------------
+Equi Join
+insert into employee values(1,'RAM','Delhi');
+insert into employee values(2,'Varun','Chd');
+insert into employee values(3,'Ravi','Chd');
+insert into employee values(4,'Amrit','Delhi');
+
+
+insert into department values('D1','Delhi',1);
+insert into department values('D2','Pune',2);
+insert into department values('D3','Patna',4);
+
+----------------------------------------------------------------------
+Self Join Data
+insert into study values('S1', 'C1', 2016);
+insert into study values('S2', 'C2', 2017);
+insert into study values('S1', 'C2', 2017);
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Joins and Its Types
+
+Joins:  Whenver we have to join 2 or more tables and get the result then we need the joins.
+
+Purpose joins => we can combine 2 or more selects into one query and show the results.
+
+employee
+
+-----------------------------
+empno(pk) ename	 address			
+-----------------------------
+1	Ram	 Delhi
+2	Varun	 Chd
+3	Ravi	 Chd
+4	Amrit	 Delhi
+5	Nitin	 Noida
+-----------------------------
+select address from employee where ename='Ravi'; => Chd
+
+department
+-----------------------------
+deptno(pk)	name	empno(fk)
+-----------------------------
+D1		HR	 1
+D2		IT	 2
+D3		MKTNG	 4
+D4		Finance	 5
+-----------------------------
+
+1. Find the employee name who is working in HR department ?
+   => both the tables 
+   we will go for join.
+
+Note : There must be some common attribute in tables to use joins. (empno)
+
+join -> Cross product + Condition
+
+Types:
+1. Cross Join (Cartesian Product)
+2. Natural Join
+3. Self Join (Only 1 table)
+4. Equi Join
+5. Outer Join
+	a. left outer join
+	b. right outer join
+	c. full outer join = left outer join UNION right outer join
+6. Inner join 
+--------------------------------------------------------------------------------------------------------------------
+1. Cross Join (Cartesian Product)
+
+  emp * dept
+  4   *  3   = 12 rows
+
+Cross Join : select * from emp,dept;
+--------------------------------------------------------------------------------------------------------------------
+2. Natural Join
+
+Find the employee names who is working in a department.
+
+1.We require both the tables
+2. We have to find the common attribute between the table -> empno
+3. Whenever we have to equalise the values of the common attribute (empno) then we aloways use NATURAL JOIN.
+
+select ename from emp,dept where emp.empno = dept.empno;
+		OR
+select ename from emp natural join dept;
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+3. Self Join (Only 1 table):
+  In this join the table is joined to itself.
+
+I want find student id who is enrolled for 2 two different courses ?
+sid => student id , cid => course id
+
+query : select ________ from study t1, study t2; 
+
+WE make the same table 2 times and we name that as t1 and t2.
+--------------------------------------------------------------------------------------------------------------------
+select t1.sid from study t1, study t2
+where
+t1.sid = t2.sid   
+and
+t1.cid <> t2.cid; 
+--------------------------------------------------------------------------------------------------------------------
+select distinct t1.sid from study t1, study t2
+where
+t1.sid = t2.sid
+and 
+t1.cid <> t2.cid; 
+--------------------------------------------------------------------------------------------------------------------
+4. Equi-Join
+  In Natural join we use equality between same common attribute but in case of equijoin we can compare between
+  any attribute, which is not common.
+
+Find the employee name who worked in a department having location is same as the address ?
+
+select ename from emp,dept 
+where emp.empno = dept.empno
+and
+emp.address = dept.loc;
+
+Note:  We can use = operator between the common attributes and un-common attributes also. 
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+5. Outer Join
+	a. left outer join
+	b. right outer join
+	c. full outer join = left outer join UNION right outer join
+
+a. left outer join 
+It gives (displays) the matching rows, and the rows which are in left table but not in the right table.
+(Its a combination of natural join + somthing else)
+  
+select * from scott.emp;
+select * from scott.dept;
+
+select empno, ename , dname, loc from 
+scott.dept left outer join scott.emp  on
+(scott.emp.deptno = scott.dept.deptno);
+
+--------------------------------------------------------------------------------------------------------------------
+b. right outer join 
+It gives (displays) the matching rows, and the rows which are in right table but not in the left table.
+(Its a combination of natural join + somthing else)
+
+select * from scott.emp;
+select * from scott.dept;
+
+select empno, ename , dname, loc from 
+scott.emp right outer join scott.dept  on
+(scott.emp.deptno = scott.dept.deptno);
+
+--------------------------------------------------------------------------------------------------------------------
+c. Full outer join
+   right outer join union left outer join.
+
+select empno, ename , dname, loc from 
+scott.emp full outer join scott.dept on
+(scott.emp.deptno = scott.dept.deptno);
+
+select * from scott.emp;
+select * from scott.dept;
+
+--------------------------------------------------------------------------------------------------------------------
+6. Inner join : 
+   It also known as simple join. It returns all rows from multiple tables where the join condition is met.  
+
+  select empno, ename , dname, loc from 
+  scott.emp inner join scott.dept on
+ (scott.emp.deptno = scott.dept.deptno);
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Day 5 - Date : 10-12-2021
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PL/SQL 
+Overview PL/SQL
+Basic Syntax : Data Types, Variables, Operators, Conditions and Loops
+PL/SQL Stored Procedures
+PL/SQL Stored Functions
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Overview PL/SQL ?
+
+PL/SQL => Programming Language of SQL.
+
+PL/SQL => Programming Language 1980 by Oracle Corp.
+PL/SQL => Prcedural Extenstion to Oracle.
+Its completely portable language.
+interpreted in OS independent env.
+PL/SQL can also be called directly from SQL*Plus interface.
+Syntax of PL/SQL -> programming languages like Pascal, ADA etc.
+Full support to PL/SQL provided by Oracle, IBM DB2.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What are the different features of PL/SQL ?
+
+1.In PL/SQL we can use SQL.
+2.Error Checking 
+3.It offers numerous data types.
+4.It supports structured programming -: using stored procedures and stored functions.
+5.It supports OOPS.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PL/SQL basic Syntax:
+
+1. Declarations section.
+2. Executable commands.
+3. Exception handling.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+1. Declarations section.
+  starts with a keyword called as DECLARE. It is an optional section 
+  define : variables and other elements to be used in the program.
+2.Executable section
+  this section is enclosed within BEGIN and END keyword. this is mandatory section.
+  It consist of PL/SQL statements of program.
+  It should have at least one executable line of code.
+
+3. Exception Handling 
+   starts with keyword EXCEPTION.
+   This is an optional section.
+   this section contains exceptions that handle errors in the program.
+
+NOTE: Every PL/SQL statement ends with semicolon (;), PL/SQL blocks can be nested within PL/SQL blocks using BEGIN and END.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+basic syntax:
+
+DECLARE
+<declarations section>
+BEGIN
+<executable commands>
+EXCEPTION
+<exception handling>
+END;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+DECLARE
+    message varchar2(20) := 'Hello World !!';
+BEGIN
+    dbms_output.put_line(message);
+END;
+/
+
+
+with comments
+
+DECLARE
+   -- variable declaration
+    message varchar2(20) := 'Hello World !!';
+BEGIN
+    /*
+        PL/SQL executable statement(s).
+    */
+    dbms_output.put_line(message);
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Delimeters 
+--------------------------------------
+:=   assignment operator
+--------------------------------------
+= Realational Operator
+--------------------------------------
+. component selector
+--------------------------------------
+% attribute indicator
+--------------------------------------
+|| concatination operator
+--------------------------------------
+; statement terminator
+--------------------------------------
+-- single line comment
+--------------------------------------
+/* */ multi line comment
+--------------------------------------
+<, >, <=, >=  relational operators
+--------------------------------------
+<>, '=, ~=, ^=  different versions of not equal.
+--------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PL/SQL Program Units:
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PL/SQL block
+Function
+Procedures
+Packages
+Types
+Triggers etc.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Data Types:
+
+Numeric types : numeric values on which arithmetic operations are performed.
+NUMBER(prec,scale), INT or INTEGER, FLOAT, REAL(approx. 18 decimal digits)  
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Character : Alphanumeric values thar represents single character or strings of characters
+CHAR -> Fixed-length character Only Characters , 
+VARCHAR2 -> Alphnumeric values, Variable length character string.
+RAW -> variable length binary or byte string.
+NCHAR
+NVARCHAR2
+LONG
+ROWID -> address of the row in an ordinary table.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Boolean : logical values on which we perform some logical operations, 
+TRUE, FALSE and NULL values.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Datetime : Dates and times
+YEAR -> -4712 to 9999 (excluding 0) 
+MONTH -> 01 to 12
+DAY -> 01 to 31
+
+HOUR -> 00 23
+MINUTE -> 00 59
+SECOND -> 00 to 59.9 -> precision of time in fractional seconds.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PL/SQL we can create our own type.(User defined types)
+
+SUBTYPE CH IS CHAR;
+SUBTYPE INTEGER IS NUMBER(38,0);
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+   SUBTYPE name IS char(20);
+   SUBTYPE message IS varchar2(100);
+   
+   salutation name;
+   greetings message;
+   
+BEGIN
+       salutation := 'Good Morning !!';
+       greetings := 'Welcome to PL/SQL...';
+       dbms_output.put_line(salutation||greetings );
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+   SUBTYPE name IS char(20);
+   SUBTYPE message IS varchar2(100);
+   
+   salutation name;
+   greetings message DEFAULT 'Have a Nice Day...';
+   
+BEGIN
+       salutation := 'Good Morning !!';
+       dbms_output.put_line(salutation||greetings );
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+    a integer := 10;
+    b integer := 20;
+    c integer;
+    f real;
+BEGIN
+       c := a + b;
+       dbms_output.put_line('Value of c :'|| c);
+       f := 90.0 / 4.0;
+       dbms_output.put_line('Value of f :'|| f);
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Scopes Variable:
+1. Global variables
+2. Local Scope
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+    -- Global Variables
+    a integer := 10;
+    b integer := 20;
+    c integer;
+    f real;
+BEGIN
+       DECLARE
+        d integer := 200; -- Local Variable
+       BEGIN
+       dbms_output.put_line('Value of d :'|| d);
+       c := a + b;
+       dbms_output.put_line('Value of c :'|| c);
+       f := 90.0 / 4.0;
+       dbms_output.put_line('Value of f :'|| f);
+       END;
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE CUSTOMERS( 
+   ID   INT NOT NULL, 
+   NAME VARCHAR (20) NOT NULL, 
+   AGE INT NOT NULL, 
+   ADDRESS CHAR (25), 
+   SALARY   DECIMAL (18, 2),        
+   PRIMARY KEY (ID) 
+);  
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );  
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );  
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );
+  
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 ); 
+ 
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );  
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
+VALUES (6, 'Komal', 22, 'MP', 4500.00 ); 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+    c_id customers.id%type := 2;
+    c_name customers.name%type;
+    c_addr customers.address%type;
+    c_sal customers.salary%type;
+    
+BEGIN
+    
+    select name, address, salary into c_name, c_addr, c_sal from customers
+    where id=c_id;
+    
+    dbms_output.put_line('Customer: '||c_name|| ' earns '|| c_sal || ' from '|| c_addr);
+    
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Assignment:
+Question 1:
+Variables:
+1.PI -> constant number 3.14 => pi constant number := 3.1434;
+2.radius -> number
+3. diameter -> number
+4.circumference -> number
+5. area -> number.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Display Radius, Diameter, Circumference and area of circle.
+
+Question 2:
+You want to take a number and check the number is even or odd.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Question 3:
+You want to take a number and print the table of that number.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Question 4:
+Find the factorial of a number 
+6! => 6 * 5 * 4 * 3 * 2 * 1 = 720
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Question 5:
+You have to write the PL/SQL code to select salary of a customer with id specified.
+then you have to check whether the customer salary < 2000 if yes then you have to update the salary of that customer by hike of 1000 rupees.
+(Hints: Select into and then check the condition, Update the customer salary.)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE 
+        c_id customers.id%type := 2;
+        c_sal customers.salary%type; 
+BEGIN
+        select salary into c_sal from customers
+        where id=c_id;
+        
+        IF (c_sal <= 2000 ) THEN
+            update customers set salary = salary + 1000 
+            where id = c_id;
+            dbms_output.put_line('Salary is updated...');
+        END IF;
+END;
+/
+
+select * from customers;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Loops In PL/SQL 
+1. Basic LOOP
+
+DECLARE 
+    i number := 10;       
+BEGIN
+      LOOP
+         dbms_output.put_line(i);
+         i := i + 10;
+         exit WHEN i > 50;
+      END LOOP;
+      
+         dbms_output.put_line('Final Value of i : '|| i);
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2. WHILE LOOP
+
+DECLARE 
+    i number := 10;       
+BEGIN
+      WHILE i < 50 LOOP
+         dbms_output.put_line(i);
+         i := i + 10;
+      END LOOP;
+      
+      dbms_output.put_line('Final Value of i : '|| i);
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+3. FOR LOOP
+DECLARE 
+    i number(10);       
+BEGIN
+      FOR i in 1 .. 10 LOOP
+         dbms_output.put_line(10 * i);
+      END LOOP;
+      
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+For with reverse order
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE 
+    i number(10);       
+BEGIN
+      FOR i in REVERSE  1 .. 10 LOOP
+         dbms_output.put_line(10 * i);
+      END LOOP;
+      
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+String Handling Functions inside PL/SQL
+
+DECLARE 
+    greetings varchar2(11) := 'hello world';       
+BEGIN
+      
+      dbms_output.put_line(upper(greetings));
+      
+      dbms_output.put_line(lower(greetings));
+      
+      dbms_output.put_line(initcap(greetings));
+      
+      /* getting first character from the string */
+      dbms_output.put_line(substr(greetings,1,1));
+      
+        /* getting last character from the string */
+      dbms_output.put_line(substr(greetings,-1,1));
+      
+        /* fetch the five character from 7th character */
+      dbms_output.put_line(substr(greetings,7,5));
+      
+        /* find the location of first character e */
+      dbms_output.put_line(instr(greetings,'e'));
+      
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Trim functions
+
+DECLARE 
+    greetings varchar2(30) := '......hello world......';       
+BEGIN
+
+      dbms_output.put_line(rtrim(greetings,'.'));
+      dbms_output.put_line(ltrim(greetings,'.'));
+      dbms_output.put_line(trim('.' from greetings));
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Stored Procedures and Stored Functions
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Stored Procedures :
+A subprogram is a program unit/module that performs a specific task.
+These subprograms are combined to form larger programs.
+It is used for Modular Designing.
+Note: Stored Procedured do not return a value direcly. Mainly used to perform an action.  
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax of Stored Procedure: 
+
+CREATE OR REPLACE PROCEDURE [procedure_name](parameter_name [IN | OUT | IN OUT] data_type, ..... so on)
+{IS | AS}
+BEGIN
+
+  <procedure body>  
+
+END procedure_name;
+
+IN -> input parameter, this parameter is used inside the procedure.
+
+OUT -> output parameter, this parameter is used for taking the result out of the procedure.
+
+IN OUT -> which acts as input as well as output paramter.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Simple Hello World Procedure
+----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE greetings
+AS
+BEGIN
+     dbms_output.put_line('Hello World !!');
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+To call the procedure we need use 
+EXECUTE procedure_name;
+
+EXECUTE greetings;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+How to call a procedure from PL/SQL block:
+
+BEGIN
+     greetings;
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+How to delete the procedure:
+
+DROP PROCEDURE procedure_name;
+
+DROP PROCEDURE greetings;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Program to find the minimum between two numbers
+1. Created a procedure : findMin
+CREATE OR REPLACE PROCEDURE findMin(x IN number, y IN number, z OUT number) IS
+BEGIN
+     IF x < y THEN
+     z := x;
+     ELSE
+     z := y;
+     END IF;
+END;
+/
+
+2. We have to call the procedure from the PL/SQL block.
+
+DECLARE
+    a number;
+    b number;
+    c number;
+BEGIN
+    a := 23;
+    b := 45;
+    findMin(a,b,c);
+    
+    dbms_output.put_line('Minimum of (23, 45) : '|| c);
+    
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE square(x IN OUT number)
+IS
+BEGIN
+    x := x * x;
+END;
+/
+
+
+DECLARE 
+    a number;
+BEGIN
+    a := 23;
+    square(a);
+    dbms_output.put_line('Square of 23 = '||a);
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Using Procedures with DML commands
+
+CREATE OR REPLACE PROCEDURE updateSal(i IN customers.id%type, s IN customers.salary%type)
+IS
+BEGIN
+     update customers set salary = s where id = i;
+END;
+/
+
+EXECUTE updateSal(2,9999);
+
+select * from customers;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Stored Functions :
+Stored Functions are standalone in nature.
+A function is same as procedure except that it returns some value.
+
+syntax:
+
+CREATE [OR REPLACE] FUNCTION function_name
+[(param_name [IN | OUT | IN OUT] type [,.....])]
+RETURN return_datatype
+{IS | AS}
+BEGIN
+  <function body>
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE OR REPLACE FUNCTION totalCustomers
+RETURN number 
+IS
+    total number(3) := 0;
+BEGIN
+    
+    SELECT count(*) into total from customers;
+    RETURN total;
+    
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE
+    c number(3);
+BEGIN
+    c := totalCustomers();
+    dbms_output.put_line('Total no of customers : '|| c);
+END;
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Can you write a stored function which accepts 2 input paramters and finds the maximum numbers from 2 numbers.
+
+CREATE OR REPLACE FUNCTION findMax(x IN number, y IN number)
+RETURN number 
+IS
+    z number;
+BEGIN
+    
+     IF x > y THEN
+        z := x;
+     ELSE
+        z := y;
+     END IF;
+     
+     return z;
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Combining Stored fuctions with PL/SQL block.
+
+DECLARE 
+    a number;
+    b number;
+    c number;
+    
+FUNCTION findMax(x IN number, y IN number)
+RETURN number 
+IS
+    z number;
+BEGIN
+    
+     IF x > y THEN
+        z := x;
+     ELSE
+        z := y;
+     END IF;
+     
+     return z;
+END;
+BEGIN
+      a := 23;
+      b := 78;
+      
+      c := findMax(a,b);
+      dbms_output.put_line('Max of 23 and 78 :' || c);
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+DECLARE 
+    num number;
+    fact number;
+    
+FUNCTION factorial(x number)
+RETURN number 
+IS
+     f number;
+BEGIN
+        IF x = 0 THEN
+            f := 1;
+        ELSE
+            f := x * factorial(x - 1);
+        END IF;
+        
+    return f;
+END;
+BEGIN
+        num := 6;
+        fact := factorial(num);
+        dbms_output.put_line('Factorial of '|| num || ' is : '|| fact);
+END;
+/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Cursor Example
+
+DECLARE 
+   c_id customers.id%type; 
+   c_name customers.name%type; 
+   c_addr customers.address%type; 
+   CURSOR c_customers is 
+      SELECT id, name, address FROM customers; 
+BEGIN 
+   OPEN c_customers; 
+   LOOP 
+   FETCH c_customers into c_id, c_name, c_addr; 
+      EXIT WHEN c_customers%notfound; 
+      dbms_output.put_line(c_id || ' ' || c_name || ' ' || c_addr); 
+   END LOOP; 
+   CLOSE c_customers; 
+END; 
+/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+1 Ramesh Ahmedabad  
+2 Khilan Delhi  
+3 kaushik Kota     
+4 Chaitali Mumbai  
+5 Hardik Bhopal   
+6 Komal MP  
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
